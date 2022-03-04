@@ -1,7 +1,24 @@
 import React from 'react';
 import Styled from 'styled-components';
+import { auth, provider } from '../firebase';
+import { signInWithPopup } from 'firebase/auth';
 
 const Header = () => {
+
+  const handleAuth = () => {
+    // console.log('Login button clicked');
+    // auth.signInWithPopup(provider).then((result) => {
+    //   console.log(result);
+    // }).catch((error) => {
+    //   alert(error.message);
+    // });
+    signInWithPopup(auth, provider).then((result) => {
+      console.log(result);
+    }).catch((error) => {
+      alert(error.message);
+    });
+  }
+
   return (
     <Nav>
       <Logo>
@@ -37,9 +54,8 @@ const Header = () => {
           <img src="./images/series-icon.svg" alt="#"/>
           <span>series</span>
         </a>
-        
       </NavMenu>
-      {/* <Login>Login</Login> */}
+      <Login onClick={ handleAuth }>Login</Login>
     </Nav>
   )
 }
@@ -140,7 +156,22 @@ const NavMenu =  Styled.div`
   }
 `;
 
-// const Login =  Styled.a`
-// `;
+const Login =  Styled.a`
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 17px;
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+  transition: all .2s ease 0s;
+  cursor: pointer;
+
+  &:hover {
+    background: #f9f9f9;
+    color: #000;
+    border-color: transparent;
+  }
+`;
 
 export default Header;
