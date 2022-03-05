@@ -4,6 +4,8 @@ import Recommend from '../Recommend';
 import Header from './Header';
 import ImgSlider from './ImgSlider';
 import NewDisNey from './NewDisney';
+import Originals from './Originals';
+import Trending from './Trending';
 import Viewers from './Viewers';
 
 const Home = () => {
@@ -15,6 +17,8 @@ const Home = () => {
         <Viewers />
         <Recommend />
         <NewDisNey />
+        <Originals />
+        <Trending/>
       </Container>
     </>
   );
