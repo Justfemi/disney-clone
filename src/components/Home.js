@@ -1,5 +1,6 @@
 import React from 'react';
 import Styled from 'styled-components';
+import Recommend from '../Recommend';
 import Header from './Header';
 import ImgSlider from './ImgSlider';
 import Viewers from './Viewers';
@@ -11,6 +12,7 @@ const Home = () => {
       <Container>
         <ImgSlider />
         <Viewers />
+        <Recommend />
       </Container>
     </>
   );
