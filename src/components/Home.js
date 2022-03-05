@@ -3,6 +3,7 @@ import Styled from 'styled-components';
 import Recommend from '../Recommend';
 import Header from './Header';
 import ImgSlider from './ImgSlider';
+import NewDisNey from './NewDisney';
 import Viewers from './Viewers';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         <ImgSlider />
         <Viewers />
         <Recommend />
+        <NewDisNey />
       </Container>
     </>
   );
