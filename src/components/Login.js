@@ -4,22 +4,24 @@ import Header from './Header';
 
 const Login = () => {
   return (
-    <Container>
+    <>
       <Header />
-      <Content>
-        <Cta>
-          <CtaLogoOne src="./images/cta-logo-one.svg" alt="logo one" />
-          <SignUp>Get all there</SignUp>
-          <Description>
-            Get Premier Access to Raya and the Last Dragon for an additional
-            fee with a Disney+ subscription. As of 03/26/21, the price of
-            Disney+ and The Disney Bundle will increase by $1.
-          </Description>
-          <CtaLogoTwo  src="./images/cta-logo-two.png" alt="logo two"/>
-        </Cta>
-        <BgImg />
-      </Content>
-    </Container>
+      <Container>
+        <Content>
+          <Cta>
+            <CtaLogoOne src="./images/cta-logo-one.svg" alt="logo one" />
+            <SignUp>Get all there</SignUp>
+            <Description>
+              Get Premier Access to Raya and the Last Dragon for an additional
+              fee with a Disney+ subscription. As of 03/26/21, the price of
+              Disney+ and The Disney Bundle will increase by $1.
+            </Description>
+            <CtaLogoTwo  src="./images/cta-logo-two.png" alt="logo two"/>
+          </Cta>
+          <BgImg />
+        </Content>
+      </Container>
+    </>
   )
 }
 
