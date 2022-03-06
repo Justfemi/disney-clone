@@ -5,6 +5,7 @@ import { signInWithPopup } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { selectUserName, selectUserPhoto, setSignOutState, setUserLoginDetails } from '../features/user/userSlice';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -16,8 +17,8 @@ const Header = () => {
     auth.onAuthStateChanged(
       async(user) => {
         if(user) {
-          setUser(user)
-          navigate('/home')
+          setUser(user);
+          navigate('/home');
         }
       }
     )
@@ -53,9 +54,11 @@ const Header = () => {
 
   return (
     <Nav>
-      <Logo>
-        <img src="./images/logo.svg" alt=""/>
-      </Logo>
+      <Link to="/">
+        <Logo>
+          <img src="./images/logo.svg" alt=""/>
+        </Logo>
+      </Link>
 
       { !userName ? ( 
         <Login onClick={ handleAuth }>Login</Login> 
