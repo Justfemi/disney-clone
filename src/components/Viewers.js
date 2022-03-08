@@ -89,8 +89,9 @@ const Wrap = Styled.div`
 
   &:hover{
     box-shadow: rgb(0 0 0 / 69%) 0 26px 30px -10px, rgb(0 0 0 / 73%) 0 16px 10px -10px;
-    transform: scale(1.05);
+    transform: scale(1.10);
     border-color: rgba(249, 249, 249, .8);
+    transition: all .8s ease-in-out;
 
     video {
       opacity: 1;
